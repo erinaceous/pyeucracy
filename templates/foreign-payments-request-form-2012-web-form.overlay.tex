@@ -1,0 +1,53 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\renewcommand{\baselinestretch}{0.7}
+% \renewcommand{\seriesdefault}{\bfdefault}
+\renewcommand*{\familydefault}{\sfdefault}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usepackage{lmodern}
+
+\input{templates/foreign-payments-request-form-2012-web-form.temp.tex}
+
+\pagestyle{empty}
+\begin{document}
+% \fontfamily{lmtt}\selectfont
+% \fontfamily{lmodern}\selectfont
+\begin{tikzpicture}[remember picture,overlay]
+    \node at (current page.center) {\includegraphics[page=1]{templates/foreign-payments-request-form-2012-web-form.pdf}};
+    \begin{scope}[shift={(current page.south west)},every node/.style={anchor=north west}]
+        % \draw [help lines] (0,0) grid (current page.north east);
+        % \draw [help lines,thick] (0,0) grid [step=5cm] (current page.north east);
+        %
+        \node[align=left] at (7.4cm,25.4cm) {\formfrom};
+        \node[align=left] at (7.45cm,24.68cm) {\formdepartment};
+        \node[align=left] at (8.8cm,23.24cm) {\formdate};
+
+        \node[align=left] at (1.55cm,19.9cm) {\formbeneficiary};
+        \node[align=left] at (11.8cm,19.9cm) {\formbankname};
+
+        \node[align=left] at (1.55cm,18.3cm) {\formaddress};
+        \node[align=left] at (11.8cm,18.3cm) {\formbankaddress};
+
+        \node[align=left] at (5.2cm,16.4cm) {\formcountry};
+        \node[align=left] at (6cm,15.6cm) {\formcurrency};
+        \node[align=left] at (6.1cm,14.15cm) {\formtransfertype};
+        \node[align=left] at (6.1cm,13.2cm) {\formamount};
+
+        \node[align=left] at (11.9cm,15.9cm) {\formiban};
+        \node[align=left] at (14.45cm,14.65cm) {\formswiftbic};
+
+        \node[align=left] at (8.1cm,12.3cm) {\formdetails};
+
+        \node[align=left] at (1.4cm,6.55cm) {\formoneaccount};
+        \node[align=left] at (9.2cm,6.55cm) {\formoneproduct};
+        \node[align=left] at (11.8cm,6.55cm) {\formonecurrency};
+        \node[align=left] at (15.6cm,6.55cm) {\formoneamount};
+        \node[align=left] at (5.5cm,6.55cm) {\formoneproject};
+
+        \node[align=left] at (11.8cm,4.45cm) {\formtotalcurrency};
+        \node[align=left] at (15.6cm,4.45cm) {\formtotalamount};
+    \end{scope}
+\end{tikzpicture}
+\clearpage
+\end{document}

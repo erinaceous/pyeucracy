@@ -1,0 +1,10 @@
+cookies
+forms/*
+misc/*
+*.pyo
+*.pyc
+__pycache__/*
+*.aux
+*.log
+*.temp.tex
+contacts.tsv
